@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+ const SubmitForm=()=>{
+  alert("Form sumbitted")
+ }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div id="container">
+         <header>Register Form
+         </header>
+         <form >
+            <fieldset >
+               <br/>
+               <input type="text" name="username" id="username" placeholder="Username" required autofocus/>
+               <br/><br/>
+               <input type="email" name="email" id="email" placeholder="E-mail" required/>
+               <br/><br/>
+               <input type="password" name="password" id="password" placeholder="Password" required/>
+               <br/><br/>
+               <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required/>
+               <br/> <br/> <br/>
+               <label for="submit"></label>
+               <input type="submit" onClick={SubmitForm} name="submit" id="submit" value="REGISTER" />
+            </fieldset>
+         </form>
+      </div>
     </div>
   );
 }
